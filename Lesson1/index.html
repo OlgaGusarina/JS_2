@@ -4,86 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <style>
-        * {
-            color: #464f41;
-            font-family: sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-
-        .center {
-            margin: 32px 10%;
-        }
-
-        body {
-            background: #f4f9f9;
-        }
-
-        header {
-            margin-bottom: 32px;
-            background-color: #ccf2f4;
-        }
-
-        .btn-cart {
-            background: #a4ebf3;
-            border: 1px solid #aaaaaa;
-            padding: 8px 16px;
-            margin: 32px;
-            width: 200px;
-
-
-        }
-
-        .btn-cart:active,
-        .btn-cart:focus {
-            outline: none;
-        }
-
-        .btn-cart:hover {
-            transform: scale(1.1);
-        }
-
-        .products {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .product-item {
-
-            background: #aaaaaa;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 8px 16px;
-        }
-
-        .by-btn {
-            background: #a4ebf3;
-            border: 1px solid #aaaaaa;
-            padding: 8px 16px;
-
-        }
-
-        .by-btn :active,
-        .by-btn:focus {
-            outline: none;
-        }
-
-        .by-btn:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="center">
-        <button class="btn-cart" type="button">Корзина</button>
+        <div class="logo">
+            <img class="logo_img" src="images/schwifty.jpg">
+            <h1>Online-shop</h1>
+        </div>
+        <button class="btn-cart" type="button">Cart</button>
     </header>
     <main class="center">
-        <div class="products"></div>
+        <h2>Catalog</h2>
+        <div class="products">
+        </div>
+        <h2>Cart</h2>
+        <div class="cart">
+        </div>
     </main>
-    <script src="js/main.js"></script>
+    <footer class="footer center">
+        <div class="footer_left">
+            <img src="images/lookMorty.jpg" alt="lookMorty">
+            <div class="cart_info">
+                <p class="quantity"></p>
+                <p class="total"></p>
+            </div>
+        </div>
+        <div class="cart_buttons">
+            <button class="btn-cart">Buy</button>
+            <button class="btn-cart" id="clear_cart">Clear cart</button>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
