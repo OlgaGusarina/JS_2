@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="center">
-        <div class="logo">
-            <img class="logo_img" src="images/schwifty.jpg">
-            <h1>Online-shop</h1>
-        </div>
-        <button class="btn-cart cart_btn" type="button">Cart</button>
+    <header>
+        <div class="logo">Интернет-магазин</div>
         <div class="cart">
+            <form action="#" class="search-form">
+                <input type="text" class="search-field">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn-cart" type="button">Корзина</button>
+            <div class="cart-block invisible"></div>
         </div>
     </header>
-    <main class="center">
-        <div class="products">
-        </div>
+    <main>
+        <div class="products"></div>
+        <form action="#" class="input">
+            <input type="text" class="input_field" id="name" placeholder="Ваше имя">
+            <input type="text" class="input_field" id="phone" placeholder="Номер телефона в формате +7(000)000-0000">
+            <input type="email" class="input_field" id="email" placeholder="Ваша почта">
+            <input type="text" class="input_field" id="comment" placeholder="Введите комментарий">
+            <button type="submit" class="input_submit">Отправить</button>
+        </form>
     </main>
-    <script src="./js/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
+
+
+<!-- Создать форму обратной связи с полями: Имя, Телефон, E-mail, текст, кнопка Отправить. При нажатии на кнопку Отправить
+произвести валидацию полей следующим образом:
+a. Имя содержит только буквы.
+b. Телефон имеет вид +7(000)000-0000.
+c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.
+d. Текст произвольный.
+e. Если одно из полей не прошло валидацию, необходимо выделить это поле красной рамкой и сообщить пользователю об
+ошибке.
